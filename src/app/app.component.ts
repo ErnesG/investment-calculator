@@ -8,5 +8,6 @@ import { RouterOutlet } from '@angular/router';
   standalone: false
 })
 export class AppComponent {
-  title = 'investment-calculator';
+  title = 'Investment calculator';
+  logoName = "investment-calculator-logo.png"
 }
