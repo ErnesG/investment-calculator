@@ -30,5 +30,7 @@
     </div>
     
 </form>
+@if (showResults  && results.length > 0) {
+    <app-results [results]="results"/>
+}
 
-<app-results/>

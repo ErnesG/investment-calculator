@@ -16,7 +16,7 @@ export class UserInputComponent{
     initialInvestment: number = 0;
     investmentService = inject(InvestmentService)
     showResults = false
-    private results!: Investment[]
+    results!: Investment[]
   onSubmit() {
     if(this.annualInvestment > 0 && this.duration > 0 && this.expectedReturn > 0 && this.initialInvestment>0) {
         this.results = this.investmentService.calculateInvestmentResults(this.annualInvestment, this.duration, this.expectedReturn, this.initialInvestment);
