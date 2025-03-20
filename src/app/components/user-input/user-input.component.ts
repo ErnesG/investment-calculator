@@ -18,10 +18,11 @@ export class UserInputComponent{
     showResults = false
     results!: Investment[]
   onSubmit() {
-    if(this.annualInvestment > 0 && this.duration > 0 && this.expectedReturn > 0 && this.initialInvestment>0) {
-        this.results = this.investmentService.calculateInvestmentResults(this.annualInvestment, this.duration, this.expectedReturn, this.initialInvestment);
-        this.showResults = true;
-    }
+      this.results = this.investmentService.calculateInvestmentResults(this.annualInvestment, this.duration, this.expectedReturn, this.initialInvestment); 
+      this.duration = 0;
+      this.expectedReturn = 0;
+      this.annualInvestment = 0;
+      this.initialInvestment = 0;
   }
     
 
